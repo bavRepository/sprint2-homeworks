@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/bavRepository/static/css/main.4e3dab38.css",
+    "main.js": "/bavRepository/static/js/main.a7872d99.js",
+    "static/js/902.91fe4935.chunk.js": "/bavRepository/static/js/902.91fe4935.chunk.js",
+    "static/media/avatar.png": "/bavRepository/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/bavRepository/index.html",
+    "main.4e3dab38.css.map": "/bavRepository/static/css/main.4e3dab38.css.map",
+    "main.a7872d99.js.map": "/bavRepository/static/js/main.a7872d99.js.map",
+    "902.91fe4935.chunk.js.map": "/bavRepository/static/js/902.91fe4935.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e3dab38.css",
+    "static/js/main.a7872d99.js"
+  ]
+}
