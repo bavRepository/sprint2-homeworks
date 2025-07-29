@@ -6,30 +6,30 @@ import Junior from './pages/Junior'
 import JuniorPlus from './pages/JuniorPlus'
 
 export const PATH = {
-    PRE_JUNIOR: '/pre-junior',
-    JUNIOR: '/junior',
-    JUNIOR_PLUS: '/junior-plus',
+  PRE_JUNIOR: '/pre-junior',
+  JUNIOR: '/junior',
+  JUNIOR_PLUS: '/junior-plus',
 }
 
 function Pages() {
-    return (
-        <div>
-            {/*Routes выбирает первый подходящий роут*/}
-            <Routes>
-                {/*роутинг будут писать студенты*/}
-                {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
-                {/*<Route ...*/}
+  return (
+    <div>
+      {/*Routes выбирает первый подходящий роут*/}
+      <Routes>
+        {/*роутинг будут писать студенты*/}
+        {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
+        {/*<Route ...*/}
 
-                {/*роуты для /pre-junior, /junior, /junior-plus*/}
-                {/*<Route ...*/}
-                {/*<Route ...*/}
-                {/*<Route ...*/}
+        {/*роуты для /pre-junior, /junior, /junior-plus*/}
+        {/*<Route ...*/}
+        {/*<Route ...*/}
+        {/*<Route ...*/}
 
-                {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
-                {/*<Route ...*/}
-            </Routes>
-        </div>
-    )
+        {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
+        {/*<Route ...*/}
+      </Routes>
+    </div>
+  )
 }
 
 export default Pages
