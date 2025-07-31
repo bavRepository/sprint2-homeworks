@@ -57,7 +57,7 @@ const Greeting: React.FC<GreetingPropsType> = (
           id={'hw3-button'}
           onClick={addUser}
           className={s.button}
-          disabled={name != ''}
+          disabled={name === ''}
         >
           Add
         </button>
