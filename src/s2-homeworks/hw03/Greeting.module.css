@@ -1,35 +1,83 @@
 .greetingForm {
+    margin-top: 31px;
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 .error {
+    font-weight: 400;
+    font-size: 14px;
+    color: #c00;
 }
 
-.input {
+.input, .errorInput {
+    padding: 8px 12px;
+    border: 2px solid #d9d9d9;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
 }
 
 .input:focus {
 }
 
 .errorInput {
+    border: 1px solid red;
 }
 
 .button {
+    border: none;
+    border-radius: 3px;
+    height: 36px;
+    width: 78px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    background: #06c;
+    opacity: 1;
+    outline: none;
+    transition: transform 0.15s;
+    &:hover {
+        transform: scale(0.97);
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        cursor: pointer;
+    }
+    &:focus-visible{
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
 }
 
 .button:focus {
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 .button:active {
+    box-shadow: 3px 3px 15px rgba(184, 182, 164, 0.8);
+    transform: translateY(2px);
 }
 
 .button:disabled {
+    opacity: 0.5;
 }
 
 .text {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
 }
