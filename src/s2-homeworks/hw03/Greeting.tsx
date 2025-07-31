@@ -1,10 +1,6 @@
 import React, { ChangeEvent, KeyboardEvent } from 'react'
 import s from './Greeting.module.css'
 
-// * 9 - в файле Greeting.tsx дописать типизацию пропсов
-// * 10 - в файле Greeting.tsx вычислить inputClass в зависимости от наличия ошибки
-// * 11 - сделать стили в соответствии с дизайном
-
 type GreetingPropsType = {
   name: string // need to fix any
   setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // need to fix any
