@@ -5,6 +5,8 @@
     height: 30px;
     font-weight: 600;
     font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .disabled {
@@ -30,22 +32,31 @@
 }
 
 .default:hover {
+    background: #004fa6;
 }
 
 .red:hover {
+    background: #ae0000;
 }
 
 .secondary:hover {
+    background: #aeaeae;
 }
 
 .default:active {
+    transform: translateY(5px);
 }
 
 .secondary:active {
+    transform: translateY(5px);
 }
 
 .red:active {
+    transform: translateY(5px);
 }
 
 .button:disabled {
+    background: #004d99;
+    opacity: 0.5;
+    color: #002e5c;
 }

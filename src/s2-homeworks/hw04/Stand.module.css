@@ -1,10 +1,13 @@
 .stand {
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
 }
 
 .inputs {
+  max-width: 372px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 48px;
