@@ -4,6 +4,13 @@ import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 
+/*
+ * 1 - понять (и простить) SuperInputText
+ * 2 - в зависимости от типа и дизэйбла прицепить нужный класс в SuperButton.tsx (строка 21)
+ * 3 - дописать onChangeCallback в SuperCheckbox.tsx чтоб оба чекбокса работали на стенде
+ * 4 - сделать стили в соответствии с дизайном
+ * */
+
 const Stand = () => {
   const [stateForAllInputs, setValue] = useState<string>('')
   const [error, setError] = useState<string>('')

@@ -7,6 +7,8 @@ type DefaultButtonPropsType = DetailedHTMLProps<
   HTMLButtonElement
 >
 
+// * 2 - в зависимости от типа и дизэйбла прицепить нужный класс в SuperButton.tsx (строка 21)
+
 type SuperButtonPropsType = DefaultButtonPropsType & {
   xType?: string
 }
@@ -19,11 +21,14 @@ const SuperButton: React.FC<SuperButtonPropsType> = ({
 }) => {
   const finalClassName =
     s.button +
-    // + (disabled
-    //         ? ...
-    //         : xType === 'red'
-    //             ? ...
-    (className ? ' ' + className : '') // задачка на смешивание классов
+    (disabled
+      ? ' ' + s.disabled
+      : xType === 'red'
+        ? ' ' + s.red
+        : xType === 'secondary'
+          ? ' ' + s.secondary
+          : ' ' + s.default + (className ? ' ' + className : ''))
+  // задачка на смешивание классов
 
   return (
     <button
