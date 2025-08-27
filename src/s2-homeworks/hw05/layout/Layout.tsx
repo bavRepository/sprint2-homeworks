@@ -13,9 +13,11 @@ export const Layout: FC<PropsType> = ({ children }) => {
 
   useEffect(() => {
     if (open) {
+      document.body.style.marginRight = '20px'
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'unset'
+      document.body.style.marginRight = '0'
     }
   }, [open]) // отключает прокрутку при открытом меню
 
