@@ -1,8 +1,16 @@
 .select {
+    width: 165px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 10px;
 }
 
 .select:focus {
+    background: #fff;
 }
 
 .option:hover {
+    background: #1e90ff;
+    color: #fff;
 }
