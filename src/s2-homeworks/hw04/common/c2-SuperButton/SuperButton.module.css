@@ -1,12 +1,11 @@
 .button {
     border-radius: 3px;
     padding: 5px 24px;
-    width: 132px;
-    height: 30px;
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
     transition: transform 0.3s;
+    border: none;
 }
 
 .disabled {
@@ -58,5 +57,5 @@
 .button:disabled {
     background: #004d99;
     opacity: 0.5;
-    color: #002e5c;
+    color: white;
 }
