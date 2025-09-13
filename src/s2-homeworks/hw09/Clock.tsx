@@ -74,7 +74,7 @@ function Clock() {
       <br />
     ) // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
   const stringDate =
-    `${date.getDay().toString().padStart(2, '0')}.${(+date.getMonth() + 1).toString().padStart(2, '0')}.${date.getFullYear().toString().padStart(2, '0')}` || (
+    `${date.getDate().toString().padStart(2, '0')}.${(+date.getMonth() + 1).toString().padStart(2, '0')}.${date.getFullYear().toString().padStart(2, '0')}` || (
       <br />
     ) // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
