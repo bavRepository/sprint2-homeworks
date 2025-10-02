@@ -11,25 +11,6 @@ const SuperRange: React.FC<SliderProps> = (props) => {
         height: 3,
         padding: '13px 0',
         width: '147px',
-        '& .MuiSlider-thumb': {
-          height: 18,
-          width: 18,
-          backgroundColor: '#fff',
-          border: '1px solid  #0c2',
-          '&:hover': {
-            boxShadow: '0 0 0 8px rgba(58, 133, 137, 0.16)',
-          },
-          '& .airbnb-bar': {
-            height: 9,
-            width: 1,
-            backgroundColor: '#0c2',
-            marginLeft: 1,
-            marginRight: 1,
-          },
-        },
-        '& .MuiSlider-track': {
-          height: 3,
-        },
         '& .MuiSlider-rail': {
           color: '#8b8b8b',
           opacity: 1,
