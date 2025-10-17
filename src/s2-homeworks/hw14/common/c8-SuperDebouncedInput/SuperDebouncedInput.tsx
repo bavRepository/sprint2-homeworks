@@ -23,7 +23,8 @@ export type SuperDebouncedInputPropsType = Omit<
   onEnter?: () => void
   error?: ReactNode
   spanClassName?: string
-} & { // илм экспортировать тип SuperInputTextPropsType
+} & {
+  // илм экспортировать тип SuperInputTextPropsType
   // плюс специальный пропс SuperPagination
   onDebouncedChange?: (value: string) => void
 }
@@ -38,12 +39,15 @@ const SuperDebouncedInput: React.FC<SuperDebouncedInputPropsType> = ({
 
   const onChangeTextCallback = (value: string) => {
     onChangeText?.(value)
-
     if (onDebouncedChange) {
       // делает студент
       // остановить предыдущий таймер
       // запустить новый на 1500ms, в котором вызовется функция
-      //
+      clearTimeout(timerId)
+      const delay = setTimeout(() => {
+        onDebouncedChange(value)
+      }, 1500)
+      setTimerId(Number(delay))
     }
   }
 
