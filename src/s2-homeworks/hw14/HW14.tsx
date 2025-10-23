@@ -55,6 +55,9 @@ const HW14 = () => {
 
   useEffect(() => {
     const params = Object.fromEntries(searchParams)
+
+    console.log(searchParams, ' searchParams')
+    console.log(params)
     sendQuery(params.find || '')
     setFind(params.find || '')
   }, [])

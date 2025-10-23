@@ -1,9 +1,17 @@
 .pagination {
   display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .text1 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0d0b0c;
 }
 
 .text2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0d0b0c;
 }

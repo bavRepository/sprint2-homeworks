@@ -9,6 +9,7 @@
   border: 1px solid #d9d9d9;
   width: 100%;
   margin-top: 50px;
+  position: relative;
 }
 
 .hwTitle {

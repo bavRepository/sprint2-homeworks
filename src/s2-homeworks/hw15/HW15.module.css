@@ -1,24 +1,49 @@
 .tech {
-  width: 50vw;
+  width: 50%;
+  padding: 11px 17px;
 }
 
 .developer {
+  width: 50%;
+  padding: 11px 17px;
 }
 
 .techHeader {
-  width: 50vw;
+  width: 50%;
+  display: flex;
+  padding: 11px 17px;
 }
 
 .developerHeader {
+  width: 50%;
+  padding: 11px 17px;
 }
 
 .row {
   display: flex;
+
+}
+
+.row:not(:last-child) {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .rowHeader {
   display: flex;
+  background-color: #e5e5e5;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
 }
 
 .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-wrapper {
+  position: relative;
 }
