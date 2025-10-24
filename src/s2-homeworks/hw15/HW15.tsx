@@ -131,7 +131,7 @@ const HW15 = () => {
     return [...objectsArray].sort(makeComparator(direction))
   }
 
-  const sortedTechs = useMemo(() => {
+  const sortedTechs = () => {
     if (sort === '0tech') {
       return sortedData(techs, 'tech', 'asc')
     } else if (sort === '1tech') {
@@ -142,9 +142,36 @@ const HW15 = () => {
       return sortedData(techs, 'developer', 'desc')
     }
     return techs
-  }, [sort, techs])
+  }
 
-  const mappedTechs = sortedTechs?.map((t) => (
+  // const sortedTechs = useMemo(() => {
+  //   if (sort === '0tech') {
+  //     return sortedData(techs, 'tech', 'asc')
+  //   } else if (sort === '1tech') {
+  //     return sortedData(techs, 'tech', 'desc')
+  //   } else if (sort === '0developer') {
+  //     return sortedData(techs, 'developer', 'asc')
+  //   } else if (sort === '1developer') {
+  //     return sortedData(techs, 'developer', 'desc')
+  //   }
+  //   return techs
+  // }, [sort, techs])
+
+  const array: TechType[] = [
+    { id: 1, tech: '1', developer: '3developer' },
+    { id: 2, tech: '10', developer: '2developer' },
+    { id: 3, tech: '1tech', developer: 'developer' },
+    { id: 4, tech: '5css', developer: '5developer' },
+    { id: 5, tech: '5yamn', developer: '12developer' },
+    { id: 6, tech: 'techs', developer: '04developer' },
+    { id: 7, tech: 'abrms0', developer: '04developer' },
+    { id: 8, tech: 'yamn', developer: '012developer' },
+  ]
+  // console.log(sortedData(array, 'tech', 'desc'))
+
+  const sortedArrayTechs = sortedTechs()
+
+  const mappedTechs = sortedArrayTechs.map((t) => (
     <div key={t.id} className={s.row}>
       <div id={'hw15-tech-' + t.id} className={s.tech}>
         {t.tech}
