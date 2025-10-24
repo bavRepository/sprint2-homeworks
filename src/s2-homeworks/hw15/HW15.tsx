@@ -103,27 +103,23 @@ const HW15 = () => {
         return 0
       })
     } else if (sort === '1tech') {
-      return sortedItems
-        .sort((a, b) => {
-          if (a.tech < b.tech) return -1
-          if (a.tech > b.tech) return 1
-          return 0
-        })
-        .reverse()
+      return sortedItems.sort((a, b) => {
+        if (a.tech < b.tech) return 1
+        if (a.tech > b.tech) return -1
+        return 0
+      })
     } else if (sort === '0developer') {
       return sortedItems.sort((a, b) => {
         if (a.developer < b.developer) return -1
         if (a.developer > b.developer) return 1
         return 0
       })
-    } else if (sort === '0developer') {
-      return sortedItems
-        .sort((a, b) => {
-          if (a.developer < b.developer) return -1
-          if (a.developer > b.developer) return 1
-          return 0
-        })
-        .reverse()
+    } else if (sort === '1developer') {
+      return sortedItems.sort((a, b) => {
+        if (a.developer < b.developer) return 1
+        if (a.developer > b.developer) return -1
+        return 0
+      })
     }
     return sortedItems
   }, [sort, techs])
