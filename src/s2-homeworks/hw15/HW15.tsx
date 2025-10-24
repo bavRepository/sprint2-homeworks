@@ -97,17 +97,37 @@ const HW15 = () => {
   const sortedTechs = useMemo(() => {
     const sortedItems = [...techs]
     if (sort === '0tech') {
-      return sortedItems.sort()
+      return sortedItems
+        .sort((a, b) => {
+          if (a.tech < b.tech) return -1
+          if (a.tech > b.tech) return 1
+          return 0
+        })
+        .reverse()
     } else if (sort === '1tech') {
-      return sortedItems.sort().reverse()
+      return sortedItems.sort((a, b) => {
+        if (a.tech < b.tech) return -1
+        if (a.tech > b.tech) return 1
+        return 0
+      })
     } else if (sort === '0developer') {
-      return sortedItems.sort()
+      return sortedItems
+        .sort((a, b) => {
+          if (a.developer < b.developer) return -1
+          if (a.developer > b.developer) return 1
+          return 0
+        })
+        .reverse()
     } else if (sort === '0developer') {
-      return sortedItems.sort().reverse()
+      return sortedItems.sort((a, b) => {
+        if (a.developer < b.developer) return -1
+        if (a.developer > b.developer) return 1
+        return 0
+      })
     }
     return sortedItems
   }, [sort, techs])
-
+  console.log(sortedTechs)
   const mappedTechs = sortedTechs?.map((t) => (
     <div key={t.id} className={s.row}>
       <div id={'hw15-tech-' + t.id} className={s.tech}>
