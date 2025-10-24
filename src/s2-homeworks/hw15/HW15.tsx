@@ -70,7 +70,7 @@ const HW15 = () => {
     //
     setPage(newPage)
     setCount(newCount)
-    sendQuery({ page: newPage, count: newCount })
+    sendQuery({ page: newPage, count: newCount, sort })
     setSearchParams({ page: newPage.toString(), count: newCount.toString() })
   }
 
@@ -83,7 +83,7 @@ const HW15 = () => {
     //
     setSort(newSort)
     setPage(1)
-    sendQuery({ page, count })
+    sendQuery({ page, count, sort: newSort })
     setSearchParams({ page: '1', count: count.toString() })
   }
 
@@ -171,7 +171,7 @@ const HW15 = () => {
 
   const sortedArrayTechs = sortedTechs()
 
-  const mappedTechs = sortedArrayTechs.map((t) => (
+  const mappedTechs = techs.map((t) => (
     <div key={t.id} className={s.row}>
       <div id={'hw15-tech-' + t.id} className={s.tech}>
         {t.tech}
