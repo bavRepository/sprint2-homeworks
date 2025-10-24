@@ -94,36 +94,56 @@ const HW15 = () => {
     setCount(+params.count || 4)
   }, [])
 
+  const sortedData = <T, K extends keyof T>(
+    objectsArray: T[],
+    field: K,
+    direction: 'asc' | 'desc' = 'asc',
+  ): T[] => {
+    const isNumeric = (s: string): boolean => /^\d+$/.test(s)
+    const weight = (s: string): number => (isNumeric(s) ? 0 : 1)
+
+    /* ---------- фабрика компараторов ---------- */
+    type Direction = 'asc' | 'desc'
+
+    const makeComparator =
+      (dir: Direction) =>
+      (a: T, b: T): number => {
+        const ta = String(a[field])
+        const tb = String(b[field])
+
+        // 1. группы: числа < не-числа
+        const wa = weight(ta)
+        const wb = weight(tb)
+        if (wa !== wb) return dir === 'asc' ? wa - wb : wb - wa
+
+        // 2. обе числовые → как числа
+        if (wa === 0) {
+          const na = parseInt(ta, 10)
+          const nb = parseInt(tb, 10)
+          return dir === 'asc' ? na - nb : nb - na
+        }
+
+        // 3. обе не числовые → строки
+        return dir === 'asc' ? ta.localeCompare(tb) : tb.localeCompare(ta)
+      }
+
+    /* ---------- использование ---------- */
+    return [...objectsArray].sort(makeComparator(direction))
+  }
+
   const sortedTechs = useMemo(() => {
-    const sortedItems = [...techs]
     if (sort === '0tech') {
-      return sortedItems.sort((a, b) => {
-        if (a.tech < b.tech) return -1
-        if (a.tech > b.tech) return 1
-        return 0
-      })
+      return sortedData(techs, 'tech', 'asc')
     } else if (sort === '1tech') {
-      return sortedItems.sort((a, b) => {
-        if (a.tech < b.tech) return 1
-        if (a.tech > b.tech) return -1
-        return 0
-      })
+      return sortedData(techs, 'tech', 'desc')
     } else if (sort === '0developer') {
-      return sortedItems.sort((a, b) => {
-        if (a.developer < b.developer) return -1
-        if (a.developer > b.developer) return 1
-        return 0
-      })
+      return sortedData(techs, 'developer', 'asc')
     } else if (sort === '1developer') {
-      return sortedItems.sort((a, b) => {
-        if (a.developer < b.developer) return 1
-        if (a.developer > b.developer) return -1
-        return 0
-      })
+      return sortedData(techs, 'developer', 'desc')
     }
-    return sortedItems
+    return techs
   }, [sort, techs])
-  console.log(sortedTechs)
+
   const mappedTechs = sortedTechs?.map((t) => (
     <div key={t.id} className={s.row}>
       <div id={'hw15-tech-' + t.id} className={s.tech}>
