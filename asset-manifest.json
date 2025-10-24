@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sprint2-homeworks/static/css/main.88e57ed5.css",
-    "main.js": "/sprint2-homeworks/static/js/main.5a83f762.js",
+    "main.js": "/sprint2-homeworks/static/js/main.efb59f51.js",
     "static/js/787.66cb4309.chunk.js": "/sprint2-homeworks/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/sprint2-homeworks/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/sprint2-homeworks/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -15,11 +15,11 @@
     "index.html": "/sprint2-homeworks/index.html",
     "static/media/burger.svg": "/sprint2-homeworks/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
     "main.88e57ed5.css.map": "/sprint2-homeworks/static/css/main.88e57ed5.css.map",
-    "main.5a83f762.js.map": "/sprint2-homeworks/static/js/main.5a83f762.js.map",
+    "main.efb59f51.js.map": "/sprint2-homeworks/static/js/main.efb59f51.js.map",
     "787.66cb4309.chunk.js.map": "/sprint2-homeworks/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88e57ed5.css",
-    "static/js/main.5a83f762.js"
+    "static/js/main.efb59f51.js"
   ]
 }
